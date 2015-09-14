@@ -1,0 +1,29 @@
+<style>
+  .ttle {
+    text-align:center
+  }
+  
+  form {
+    text-align:center;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+<h2 class = "ttle">Update Player</h2>
+        <br  />
+<form action="/roster/<%= @roster.id %>/update">
+  <input type="text" name="name" placeholder="Player Name" value="<%= @roster.name %>">
+    <br> </br>
+  <input type="text" name="position" placeholder="Player Position(s)" value="<%= @roster.position %>">
+    <br> </br>  
+  <input type="text" name="number" placeholder="Player Number" value="<%= @roster.number %>">
+    <br> </br>
+  <input type='submit'>
+</form>
+</div>
+</span>
+</div>
+</div>

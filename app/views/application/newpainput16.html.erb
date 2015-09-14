@@ -1,0 +1,96 @@
+<style>
+  h1 {
+    color: white;
+  }
+  .moveloco {
+    text-align:center;;
+    color:white;
+  }
+  .moveloco2 {
+    text-align:center;
+  }
+  .centit {
+    text-align:center;
+  }
+</style>
+<h1 class= "moveloco">Input Statistics: Location 16</h1>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <br  />
+  <br  />
+<div style="background:rgba(255,255,255,0.5)" class="jumbotron">  
+  <h3>What was the Pitch Type?</h3>
+  <br  />
+  <form action="/create_pa16">
+          <input type="radio" name="fball" value="fball"> Fastball
+          <br  />
+          <input type="radio" name="offsp" value="offsp"> Off-Speed
+  <br  />
+  <br  />
+            <h3>Where did the Ball Go?</h3>
+
+          <br  />
+        <select input id="end_ball_location" name="end_ball_location">
+          <option value='lout'>Left Field</option>
+          <option value='cout'>Center Field</option>
+          <option value='rout'>Right Field</option>
+          <option value='lin'>Left Side of the Infield</option>
+          <option value='min'>Middle of the Infield </option>
+          <option value='rin'>Right Side of the Infield</option>
+        </select>   
+    <br  />
+    <br  />
+    <br  />
+    <br  />
+      </div>
+    </div>
+    <div class="col-md-4">
+        <br  />
+        <br  />
+        <br  />
+        <br  />
+        <br  />
+      <img src = "http://i62.tinypic.com/2gt51dc.png" alt="field" height="350" width="400">
+        <br  />
+    </div>
+        <br  />
+    <div class="col-md-4">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron">
+        <div class='moveloco2'>
+          <h3>What Type of Hit was It?</h3>
+        </div>
+          <br  />
+        <div class='moveloco2'>
+        <select id="hit_type" name="hit_type">
+          <option value='gball'>Groundball</option>
+          <option value='ld'>Line Drive</option>
+          <option value='flyball'>Fly Ball</option>
+        </select>
+                  <br></br>
+          <br  />
+      <div class='moveloco2'>
+        
+      <h3>What was the At Bat Result?</h3>
+          <br  />
+        <div class='moveloco2'>
+          <select id="at_bat_result" name="at_bat_result">
+          <option value='single'>Single</option>
+          <option value='double'>Double</option>
+          <option value='triple'>Triple</option>
+          <option value='homerun'>Home Run</option>
+          <option value='out'>Out</option>
+          <option value='walk'>Walk</option>
+        </select> 
+              <br  />
+        <br  />
+      <br  />
+      <div class='moveloco2'>
+        <input type='submit'>
+      </div>
+      </form>
+      </div>   
+    </div>
+  </div>
+</div>

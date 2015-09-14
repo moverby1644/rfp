@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>Baseball Statistics</title>
+<link rel="stylesheet" type="text/css" href="css/Final_Project.css">
+</head>
+<body>
+ <p>
+  <span class = "bav">
+  <span class = "bav">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            <li>
+      <a class="navbar-brand" href="/landing"><img src="http://i58.tinypic.com/167jes5.png" alt="Logo" height="26" width="40"></a>
+    </li>
+        <li class="dropdown">
+              <a href = '/index_sched' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Schedule<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href='/index_sched'>View Schedule</a></li>
+                <li><a href="/new_sched">Add Game</a></li>
+                <li><a href="/index_sched_update">Update Games</a></li>
+                <li><a href="/index_sched_delete">Delete Games</a></li>
+              </ul>
+        </li>
+        <li class='dropdown'>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Roster<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href='/index_roster'>View Roster</a></li>
+                <li><a href="/new_roster">Add Player</a></li>
+                <li><a href="/edit_roster">Update Players</a></li>
+                <li><a href="/destroy_roster">Delete Players</a></li>
+              </ul>
+        </li>
+        <li class='dropdown'>
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Videos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href='/index_video'>View Videos</a></li>
+                <li><a href="/new_video">Add Video</a></li>
+                <li><a href="#">Update Videos</a></li>
+                <li><a href="#">Delete Videos</a></li>
+              </ul>
+        </li>
+        <li>
+          <a href= '/plocopa'>Input Plate Appearance</a>
+        </li>
+        <li>
+          <a href= '/advstato'>View Statistics</a> 
+        </li>
+        <li>
+          <a href= '/contactus'>Contact Us</a>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<style>
+body {
+    background-image: url("http://i.imgur.com/eocinaL.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background size: 100%;
+}
+  .dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
+.navbar-default {
+  background-color: #000000;
+  border-color: #1904d6;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: blue;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: blue;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: blue;
+  background-color: #1904d6;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: blue;
+}
+.navbar-default .navbar-toggle {
+  border-color: #1904d6;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: blue;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: blue;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: blue;
+  }
+  table {
+    border: 1px solid black;
+}
+  th {
+    border: 1px solid black;
+}
+  td {
+    border: 1px solid black;
+}
+.asd {
+    text-align: center;
+  }
+  
+  body {
+    background-image: url("http://i.imgur.com/eocinaL.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background size: 100%;
+}
+
+  br {
+    line-height: 10px;
+ }
+
+.abr {
+  text-align: center;
+}
+
+
+.bav
+{
+position:absolute;
+}
+
+p
+{
+ text-align: middle;
+}
+.navbar-default {
+  background-color: #000000;
+  border-color: #1904d6;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: blue;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: blue;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: blue;
+  background-color: #1904d6;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #1904d6;
+}
+.navbar-default .navbar-toggle {
+  border-color: #1904d6;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: blue;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: blue;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: blue;
+  }
+ .buo  {
+    text-align:center;
+  }
+
+   .adr  {
+    text-align:center;
+  }
+  
+a {
+  color: black;
+}
+h1 {
+    color: blue;
+  }
+.cuc {
+    color:white;
+}
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+  </style>
+<%= yield %>
+
+</body>
+</html>

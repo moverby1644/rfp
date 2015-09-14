@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  time: MyString
+  location: MyString
+  oppo: MyString
+  result: MyString
+
+two:
+  date: MyString
+  time: MyString
+  location: MyString
+  oppo: MyString
+  result: MyString

@@ -1,0 +1,29 @@
+<style>
+  .ttle {
+    text-align:center
+  }
+  
+  form {
+    text-align:center;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+<h2 class = "ttle">Update Video</h2>
+        <br  />
+    <form action="/video/<%= @vid.id %>/update">
+      <input type="text" name="name" placeholder="Player's Name" value="<%= @vid.name %>">
+    <br> </br>  
+      <input type="text" name="url" placeholder="Video URL" value="<%= @vid.url %>">
+    <br> </br>
+      <input type="text" name="note" placeholder="Notes" value="<%= @vid.note %>">
+    <br> </br>
+  <input type='submit'>
+</form>
+</div>
+</span>
+</div>
+</div>

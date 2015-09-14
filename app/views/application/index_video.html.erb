@@ -1,0 +1,34 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+
+  .pwsth {
+  text-align:center;
+}
+
+.wschth {
+  text-align:center;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+      <h1 class = "text-center"> Team Videos </h1>
+        <br  />
+        <br  />
+        <% @vid.each do |video| %>
+          <h3><%= @vid.name %><h3>
+            <video width="320" height="240" controls>
+              <source src="<%=@vid.url%>" type="video/mp4">
+              <h4><%=@vid.note%></h4>
+            </video>
+        <% end %>
+      </div>
+    </span>
+  </div>
+</div>

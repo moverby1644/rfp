@@ -1,0 +1,47 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+
+  .pwsth {
+  text-align:center;
+}
+
+.wschth {
+  text-align:center;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+      <h1 class = "text-center"> Schedule </h1>
+        <br  />
+        <br  />
+        <table style="width:100%">
+          <tr>
+            <th class= "pwsth">Date</th>
+            <th class= "pwsth">Time</th>
+            <th class= "pwsth">Location</th>
+            <th class= "pwsth">Opponent</th>
+            <th class= "pwsth">Result</th>
+            <th class= 'pwsth'>Update</th>
+          </tr>
+        <% @schedules.each do |schedule| %>
+          <tr>
+            <td class= "wschth"><%=schedule.date%></td>
+            <td class= "wschth"><%=schedule.time%></td>
+            <td class= "wschth"><%=schedule.location%></td>
+            <td class= "wschth"><%=schedule.oppo%></td>
+            <td class= "wschth"><%=schedule.result%></td>
+            <td class= 'wschth'><a href='/schedule/<%=schedule.id%>/edit'>Update</td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+    </span>
+  </div>
+</div>

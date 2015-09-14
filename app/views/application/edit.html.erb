@@ -1,0 +1,33 @@
+<style>
+  .ttle {
+    text-align:center
+  }
+  
+  form {
+    text-align:center;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+<h2 class = "ttle">Update Game</h2>
+        <br  />
+<form action="/schedule/<%= @schedule.id %>/update">
+  <input type="text" name="date" placeholder="Date" value="<%= @schedule.date %>">
+    <br> </br>
+  <input type="text" name="time" placeholder="Time" value="<%= @schedule.time %>">
+    <br> </br>  
+  <input type="text" name="location" placeholder="Location" value="<%= @schedule.location %>">
+    <br> </br>
+  <input type="text" name="oppo" placeholder="Opponent" value="<%= @schedule.oppo %>">
+    <br> </br>
+  <input type="text" name="result" placeholder="Result" value="<%= @schedule.result %>">
+    <br> </br>
+  <input type='submit'>
+</form>
+</div>
+</span>
+</div>
+</div>

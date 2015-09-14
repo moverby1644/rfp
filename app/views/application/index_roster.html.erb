@@ -1,0 +1,35 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+.pwsth, .container {
+  text-align:center;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <span class="col-md-12">
+      <br  />
+      
+      <div style="background:rgba(255,255,255,0.5)" class="jumbotron"> 
+      <h1 class = "text-center"> Roster </h1>
+        <br  />
+        <br  />
+        <table style="width:100%">
+          <tr>
+            <th class= "pwsth">Player Name</th>
+            <th class= "pwsth">Player Position(s)</th>
+            <th class= "pwsth">Player Number</th>
+          </tr>
+      <% @rosters.each do |roster| %>
+          <tr>
+            <td><%=roster.name%></th>
+            <td><%=roster.position%></th>
+            <td><%=roster.number%></th>
+          </tr>
+      <% end %>
+        </table>
+</div>
+</span>
